@@ -126,12 +126,13 @@ public class cliente {
             System.out.println("INICIO DE INFORME");
             while(resultado.next()){
                 //se mostrara cada dato de la tabla
-                System.out.println(resultado.getString("nombre"));
-                System.out.println(resultado.getBoolean("apellido"));
-                System.out.println(resultado.getString("edad"));
-                System.out.println(resultado.getString("hobbie"));
-                System.out.println(resultado.getString("editor"));
-                System.out.println(resultado.getString("sisop"));
+                System.out.println("Nombre: "+resultado.getString("nombre"));
+                System.out.println("Apellido: "+resultado.getString("apellido"));
+                System.out.println("Edad: "+resultado.getString("edad"));
+                System.out.println("Hobbie:"+resultado.getString("hobbie"));
+                System.out.println("Editor de Codigo preferido: "+resultado.getString("editor"));
+                System.out.println("Sistema Operativo utilizado: "+resultado.getString("sisop"));
+                System.out.println("----------------------------");
 
             }
             System.out.println("FIN DE CONSULTA");
