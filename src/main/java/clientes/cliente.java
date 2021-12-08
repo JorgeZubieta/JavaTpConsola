@@ -14,8 +14,9 @@ public class cliente {
     //armamos lka estrucutra pricipal para eliminar el error de que no hay clase principal
     //main principak
     public static void main(String []args){
+        System.out.println("----------------------------------------");
         System.out.println("Trabajo practico Obligatorio Codo a Codo");
-        
+        System.out.println("----------------------------------------");
         
         //CREAMOS UN MENU para el ingreso de datos por pantalla
         int opc=0;
@@ -34,6 +35,7 @@ public class cliente {
         do{
             //con el do hacemos si o si que se ejecute minimo una vez el codigo minetras  opc sea menor que 0 "o" mayor a 6
             do{
+                System.out.println("MENU PRINCIPAL");                    
                 System.out.println("1 - Informe");
                 System.out.println("2 - Ingresar");
                 System.out.println("3 - Salir");
@@ -50,6 +52,7 @@ public class cliente {
                     break;
                 case 2:
                     System.out.println("COMPLETE LOS DATOS: ");
+                    System.out.println("----------------------------------------");
                     
                     System.out.println("Nombre: ");
                     nombre=sc.next();
@@ -72,12 +75,11 @@ public class cliente {
                     //estos datos ingresado por main se los voy a mandar por argumento
                     //estoy enviando argumentos a la funcion insertar esta debe recibir los mismo
                     insertar(nombre,apellido,edad,hobbie,editor,so);
-                    System.out.println("-----------------");                    
                     System.out.println("Registro Agregado");
-                    System.out.println("-----------------");
+                    System.out.println("----------------------------------------");
                     break;
                 case 3:
-                    System.out.println("Gracias por utilizar la app");
+                    System.out.println("GRACIAS POR UTILIZAR LA APP!");
                     break;
             }
         } while(opc!=3);
@@ -123,7 +125,10 @@ public class cliente {
             
             
             //IMPRIMIMOS : mientras tengA resultados
+            System.out.println("----------------------------------------");
             System.out.println("INICIO DE INFORME");
+            System.out.println("----------------------------------------");
+
             while(resultado.next()){
                 //se mostrara cada dato de la tabla
                 System.out.println("Nombre: "+resultado.getString("nombre"));
@@ -132,10 +137,11 @@ public class cliente {
                 System.out.println("Hobbie:"+resultado.getString("hobbie"));
                 System.out.println("Editor de Codigo preferido: "+resultado.getString("editor"));
                 System.out.println("Sistema Operativo utilizado: "+resultado.getString("sisop"));
-                System.out.println("----------------------------");
+                System.out.println("----------------------------------------");
 
             }
-            System.out.println("FIN DE CONSULTA");
+            System.out.println("Informe terminado!");
+            System.out.println("----------------------------------------");
         }
         
         catch(SQLException ex){
