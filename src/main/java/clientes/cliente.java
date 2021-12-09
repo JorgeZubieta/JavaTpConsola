@@ -97,7 +97,7 @@ public class cliente {
             //definimos la ubicacion de donde esta la base de datos utilizando los drivers y el local host mas el puerto por default
             String url="jdbc:mariadb://localhost:3306/developers";
             String usuario="root";
-            String clave="conejiz2012II2";
+            String clave="administrador";
             //realizamos la conexion
             conexion=DriverManager.getConnection(url,usuario,clave);
         }
